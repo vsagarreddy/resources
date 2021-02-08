@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PULP | PATIENT ADD</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- bootstrap 3.0.2 -->
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="resources/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="resources/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="resources/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body class="skin-blue">
+    <style>.control-label{ margin-top:8px;}</style>
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>Dr. Vidhya Sagar <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header bg-light-blue">
+                                    <img src="resources/images/img/avatar5.png" class="img-circle" alt="User Image" />
+                                    <p>
+                                        Vidhya Sagar - BDS,MDS
+                                        <small>ROOTCANAL SPECIALIST</small>
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="index.html" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">                
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <a href="index.html" class="logo">
+                                <img class="img-responsive" src="resources/images/logo.png" alt="PULP">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="patientDetails.html">
+                                <i class="fa fa-home"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">
+                                <i class="fa fa-stethoscope"></i> <span>About</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="patientAdd.html">
+                                <i class="fa fa-heart"></i> <span>Patient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">
+                                <i class="fa fa-h-square"></i> <span>Help</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <i class="fa fa-map-marker"></i> <span>Contact</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+          <!-- Right side column. Contains the navbar and content of the page -->
+          <aside class="right-side">                
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 style="float:left; padding-right:20px;">Patient : </h1> <p style=" line-height:30px;">Jackie Chan</p>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+              <section class="col-lg-12 connectedSortable">
+              <!-- Map box -->
+                <div class="box box-primary">
+                  <div class="box-header text-center">
+                  <!-- tools box -->
+                    <h3 class="box-title text-center">
+                       PATIENT REGISTRATION
+                    </h3>
+                  </div>
+                  <hr>
+                  <div class="box-body">
+                  <form>
+                      <div class="container" style="margin:0px; padding:0px;">
+                        <div class="form-group">
+                          <div class="col-md-3 fa-border">		          	
+                            <label for="name" class="control-label">Card Type</label>
+                            <div style="margin:0px;">
+                              <label class="control-label" style=" padding-bottom:4px;">
+                                Family Head
+                              </label>
+                            </div>
+                          </div>  
+                          <div class="col-lg-4 fa-border" style="margin-left:2px;">
+                              <div class="control-label">
+                                  <input type="radio"> Employee Card No 
+                                  <input type="radio"> Pensioner Card No
+                              </div>
+                              <div class="text" style="margin:11px 0 0 0 ;">
+                                      <input type="text" class="form-control input-sm " />
+                              </div>
+                          </div>
+                          <div class="col-md-3" style="margin-top:35px;">		          	
+                            <button type="submit" class="btn btn-info">Retrieve</button>
+                          </div>             
+                        </div>                                              
+                      </div>
+                  <hr>
+                      <div class="container" style="margin:0px; padding:0px;">
+                      	<div class="form-group">
+                        	<div class="col-lg-8" style="margin:0 5px 0 -5px; padding:0px;">
+                              <div class="row fa-border" style="margin:0 0 5px 0; padding:5px;">
+                                <div class="col-lg-10" style="margin:0; padding:0px;">
+                                  <div class="row">
+                                    <div class="col-lg-4">
+                                      <label for="name" class="control-label">Surname<span>*</span></label>
+                                      <div class="text" style="line-height:30px; margin:0px;">
+                                          <input type="text" class="form-control input-sm" id="surname" />
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                      <label for="name" class="control-label">Name<span>*</span></label>
+                                      <div class="text" style="line-height:30px; margin:0px;">
+                                          <input type="text" class="form-control input-sm" id="name" />
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 ">
+                                        <label for="name" class="control-label">Gender<span>*</span></label>
+                                        <div class="redio fa-border" style="line-height:27px; margin:0px; padding:0px;">
+                                           <div style="margin: 0 0 1px 5px;">
+                                                <input name="redio" type="radio"  id="maleRedio"> Male 
+                                                <input name="redio" type="radio" id="femaleRedio" > Female
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 ">
+                                        <label class="control-label">Marital Status<span>*</span></label>
+                                        <div class="text" style="margin:0px; padding:0px;" >
+                                            <select class="form-control input-sm" id="mStatus">
+                                                <option>-- SELECT --</option>
+                                                <option>SELECT 01</option>
+                                                <option>SELECT 02</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="name" class="control-label">Date Of Birth<span>*</span></label>
+                                        <div class="selected" style="line-height:30px; margin:0px;">
+                                            <input type="text" class="form-control input-sm" id="datepicker" value="dd/mm/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="name" class="control-label">Age<span></span></label>
+                                        <div class="text" style="line-height:30px; margin:0px;">
+                                            <div class="col-lg-12" style="margin:0px; padding:0px;">
+                                                <input type="text" placeholder="Y" id="year" class="form-control input-sm " />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="name" class="control-label">Relationship<span>*</span></label>
+                                        <div class="selected" style="line-height:30px; margin:0px;">
+                                            <select class="form-control input-sm" id="relationship">
+                                                <option>-- SELECT --</option>
+                                                <option>SELECT 01</option>
+                                                <option>SELECT 02</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 ">
+                                        <label for="name" class="control-label">Designation<span>*</span></label>
+                                          <div class="text" style="line-height:30px; margin:0px;">
+                                              <input type="text" class="form-control input-sm" />
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="name" class="control-label">Contact No<span>*</span></label>
+                                          <div class="text" style="line-height:30px; margin:0px;">
+                                              <input type="text" class="form-control input-sm" id="contactNo" />
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-2" style="margin:0; padding:5px;">
+                                  <img class="img-responsive thumbnail image" src="resources/images/img/avatar04.png"  />
+                                </div>
+                              </div>
+                              <div class="row fa-border" style="margin:0; padding:5px;">
+                              	<div class="col-lg-12" style="margin:0; padding:0px;">
+                                	<div class="row">
+                                      <label class="control-label col-lg-12">Card Address</label>
+                                        <div class="col-lg-3 ">
+                                            <label class="control-label">House No<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="vidhyasagar" class="form-control  input-sm" id="startData" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">Street<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="" class="form-control  input-sm" id="street" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">State<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">District<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 ">
+                                            <label for="name" class="control-label">Mandal/Municipality<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">City/Town/Village<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">Pin Code<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="" class="form-control  input-sm" id="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                	<div class="row">
+                                            <div>
+                                              <label class="control-label col-lg-12" style="margin-top:10px;">Communication Address</label>
+                                                <label style="margin-left:15px;">
+                                                	<input class="form-control" type="checkbox" id="check" />
+                                                     If Card and Communication Address are same
+                                                </label>                                                
+                                            </div>
+                                        <div class="col-lg-3 ">
+                                            <label class="control-label">House No<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="" class="form-control  input-sm" id="startData" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">Street<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="" class="form-control  input-sm" id="street1" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">State<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">District<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 ">
+                                            <label for="name" class="control-label">Mandal/Municipality<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">City/Town/Village<span>*</span></label>
+                                            <div class="selected" style="line-height:30px; margin:0px;">
+                                                <input type="text" class="form-control input-sm" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="name" class="control-label">Pin Code<span>*</span></label>
+                                            <div class="text" style="line-height:30px; margin:0px;">
+                                                <input type="text" value="" class="form-control input-sm" id="endData" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        	<div class="col-lg-3 fa-border has-success" style="width:23.5%;">
+                            	<label class=" col-lg-12 control-label page-header">Instructions</label>
+                                <p style="text-align:center; font-size:12px; color:#f39c12;">
+                                    Please select valid health card type.<br /> <br />                                   
+                                    Enter valid health card no and click on Retrieve butt.<br /> <br />                                   
+                                    Health card details will be populated for patient to get registered.
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top:10px;">
+                      	<div class="container">
+                          <button type="submit" class="btn btn-primary" style="padding:5px 50px;" >ADD</button> 
+                          <button type="submit" class="btn btn-primary" style="padding:5px 50px; margin-left:10px;">ADD</button> 
+                        </div>
+                      </div>
+                      </form>
+                  </div><!-- /.box-body-->
+                </div><!-- /.box -->
+              </section><!-- /.content -->
+            </section>
+          </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+    </body>
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="resources/js/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- AdminLTE App -->
+        <script src="resources/js/js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- DATA TABES SCRIPT -->
+        <script src="resources/js/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="resources/js/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="resources/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        
+        
+		<script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                        
+            $('#datepicker').datepicker({
+                 format: "DD/MM/yyyy"
+                 });  
+				alert($('#check').prop('checked'));
+			$('#check').change(function() {
+               alert("My Name Is Sagar");  
+            });
+			alert("123");
+			
+            });
+			function copyAddress(){
+				alert($('#check').prop('checked'));
+			}
+        </script>
+</html>

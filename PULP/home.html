@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PULP | RECORDS</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- bootstrap 3.0.2 -->
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="resources/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="resources/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="resources/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="skin-blue">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>Dr. Vidhya Sagar <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header bg-light-blue">
+                                    <img src="resources/images/img/avatar5.png" class="img-circle" alt="User Image" />
+                                    <p>
+                                        Vidhya Sagar - BDS,MDS
+                                        <small>ROOTCANAL SPECIALIST</small>
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="index.html" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">                
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <a href="index.html" class="logo">
+                                <img class="img-responsive" src="resources/images/logo.png" alt="PULP">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="patientDetails.html">
+                                <i class="fa fa-home"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">
+                                <i class="fa fa-stethoscope"></i> <span>About</span> 
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-heart"></i>
+                                <span>Patient</span>
+                                <i class="fa fa-angle-down pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Search Patient</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Add Patient</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">
+                                <i class="fa fa-h-square"></i> <span>Help</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <i class="fa fa-map-marker"></i> <span>Contact</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">                
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>Home </h1> 
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                
+                        <section class="col-lg-12 connectedSortable"> 
+                            <!-- Box (with bar chart) -->
+                            <div class="box box-danger" id="loading-example">
+                                <div class="box-body no-padding">
+                                    <h3 class="box-title" style="margin-left:42%;">Welcome To Our Site</h3>
+                                
+                                </div><!-- /.box-body -->
+                                 <!-- Main content -->
+                <section class="content invoice">                    
+                    <!-- title row -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="page-header">
+                                <i class="fa fa-globe"></i> PULP
+                                <small class="pull-right">Date: 2/10/2014</small>
+                            </h2>                            
+                        </div><!-- /.col -->
+                    </div>
+                    <!-- info row -->
+                    <div class="row invoice-info">
+                        <div class="invoice-col">
+                           Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.<br><br>
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+
+                </section><!-- /.content --> 
+                                
+                                
+                                
+                                
+                                <!--<div class="box-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                            <input type="text" class="knob" data-readonly="true" value="80" data-width="60" data-height="60" data-fgColor="#f56954"/>
+                                            <div class="knob-label">CPU</div>
+                                        </div>
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                            <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#00a65a"/>
+                                            <div class="knob-label">Disk</div>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#3c8dbc"/>
+                                            <div class="knob-label">RAM</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                                
+                                
+                                
+                            </div><!-- /.box -->    
+                            
+                            
+                                
+                            
+                        </section><!-- /.Left col -->
+                        
+                        
+                        
+                
+                
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+    </body>
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="resources/js/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- AdminLTE App -->
+        <script src="resources/js/js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- DATA TABES SCRIPT -->
+        <script src="resources/js/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="resources/js/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="resources/js/bootstrap-datepicker.js" type="text/javascript"></script>
+		<script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                        
+            $('#datepicker').datepicker({
+                 format: "dd/mm/yyyy"
+                 });  
+                    
+            });
+        </script>
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                $("#example1").dataTable();
+                $('#example2').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": false,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": true,
+                    "bAutoWidth": false
+                });
+            });
+        </script>
+</html>

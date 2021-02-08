@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
+	  <f:metadata>
+        <f:viewParam name="id" value="#{uploadExtraOralReport.patientId}" />
+        <f:viewParam name="name" value="#{uploadExtraOralReport.patientName}" />
+         <f:event type="preRenderView" listener="#{uploadExtraOralReport.loadPatientDetails}"/>
+     </f:metadata>
+<h:head>
+		<title>PULP | EXTRA ORAL</title>
+       <ui:include src="/WEB-INF/templates/head.xhtml" /> 
+</h:head>
+    <h:body class="skin-blue">
+        <!-- header logo: style can be found in header.less -->
+         <ui:include src="/WEB-INF/templates/header.xhtml" />
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+             <ui:include src="/WEB-INF/templates/aside.xhtml" />
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">       
+                     
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1 style="float:left; padding-right:20px;">Patient : </h1><h:outputText value="#{uploadExtraOralReport.patientName}"></h:outputText> <p style=" line-height:30px;"></p>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                        <section class="col-lg-12 connectedSortable">
+                            <!-- Map box -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <h3 class="box-title text-center">
+                                        EXTRA ORAL
+                                    </h3>
+                                </div>
+                                <hr />
+                                <h:form enctype="multipart/form-data" action="#{uploadExtraOralReport.uploadExtraOral}" method="post">
+                                <h:inputHidden value="#{uploadExtraOralReport.patientId}"></h:inputHidden>
+                                <h:messages infoStyle="color:darkgreen" style="color:red;"></h:messages>
+                                <div class="box-body no-padding">
+                                    <div class="container">
+                                        <div class="form-inner" style="margin-top:20px;">
+                                            <div class="form-group margin-left" >
+                                              <div class="col-xs-7">		            
+                                                <div class="control-wrapper">
+                                                    <label for="userID" class="control-label">Upload</label>
+                                                    <h:inputFile class="form-control" value="#{uploadExtraOralReport.file}" placeholder="Name"></h:inputFile>
+                                                </div>
+                                                 <h:commandButton value="Submit" action="#{uploadExtraOralReport.uploadExtraOral}" class="btn btn-primary" style="margin-top:25px;"></h:commandButton>
+                                              </div>              
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="control-wrapper" style="margin:40px 0 60px 60px;" >
+                                            <div class="row">
+                                            <ui:repeat var="date" value="#{uploadExtraOralReport.datesList}">
+                                                <div class="col-lg-2">
+                                                    <a href="#"><img class="img-responsive" src="resources/images/folder.png" /></a>
+                                                    <h5><h:outputText value="#{date}" style="margin:20px 0 60px 40px;"><f:convertDateTime pattern="dd-MM-yyyy"/></h:outputText></h5>
+                                                </div>
+                                            </ui:repeat>   
+                                            </div>
+                                            
+                                        </div>
+                                </div><!-- /.box-body-->
+                                <div class="box-footer">
+                               		<div class="row">
+                                        <div class="col-lg-3">
+                                             	<h:link class="btn btn-info pull-left" style="margin-left:35%;" value="Previous" outcome="records">
+												<f:param name="id" value="#{uploadExtraOralReport.patientId}" />
+												<f:param name="name" value="#{uploadExtraOralReport.patientName}" />
+												<i class="fa fa-arrow-left"></i>
+											</h:link>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#" class="btn btn-linkedin pull-right"><i class="fa fa-download"></i> Save</a>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="summary.xhtml" class="btn btn-primary"><i class="fa fa-sign-out"></i> Finish</a>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h:link class="btn btn-info pull-right" style="margin-left:35%;" value="Next" outcome="intraOral">
+												<f:param name="id" value="#{uploadExtraOralReport.patientId}" />
+												<f:param name="name" value="#{uploadExtraOralReport.patientName}" />
+												<i class="fa fa-arrow-right"></i>
+											</h:link>
+                                        </div>
+                                    </div>
+                                </div>
+                                </h:form>
+                            </div>
+                            <!-- /.box -->
+                       </section>
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="resources/js/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- AdminLTE App -->
+        <script src="resources/js/js/AdminLTE/app.js" type="text/javascript"></script>
+</h:body>
+</html>
